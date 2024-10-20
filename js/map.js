@@ -1,5 +1,7 @@
+const googleMapsApiKey = process.env.GOOGLE_MAPS_API_KEY;
 const firebaseConfig = {
-  apiKey: "AIzaSyBGHggF5GqP0Cu3wHo3XGkEzXe58igq35g",
+  // Utiliser googleMapsApiKey pour la logique de carte
+  apiKey: googleMapsApiKey,
   authDomain: "zippy-nexus-421014.firebaseapp.com",
   databaseURL: "https://zippy-nexus-421014-default-rtdb.firebaseio.com",
   projectId: "zippy-nexus-421014",
@@ -18,7 +20,7 @@ let map, polyline;
 // Function to update map and polyline
 function updateMap() {
   const position = { lat: lat, lng: lng };
-  
+
   if (map) {
     map.setCenter(position);
     path.push(position);

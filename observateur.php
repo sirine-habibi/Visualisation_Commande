@@ -48,7 +48,9 @@
         ? console.warn(p + " only loads once. Ignoring:", g)
         : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
     })({
-      key: "AIzaSyBLqUtzWtmWvRYbuQFxRIXwfySb8lrt1lg",
+      $googleObserverApiKey = getenv('GOOGLE_OBSERVER_API_KEY');
+      // Utiliser googleObserverApiKey pour la logique de l'observateur
+      key: $googleObserverApiKey,
       v: "weekly",
     });
   </script>
